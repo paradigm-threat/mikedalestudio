@@ -2,9 +2,14 @@
   "section": "home",
   "items": [
     {
-      "src": "/media/2025/08/home-page-pic.png",
-      "title": "Home Page Pic",
-      "alt": "Home Page Pic"
+      "src": "/media/2022/07/cd61d5e1-3fb7-48f5-aad7-4349a71be99f-copy.jpg",
+      "title": "cd61d5e1-3fb7-48f5-aad7-4349a71be99f-copy",
+      "alt": "cd61d5e1-3fb7-48f5-aad7-4349a71be99f-copy"
+    },
+    {
+      "src": "/media/2022/07/99c3a650-f13f-4d46-ba13-4e355f35a255.jpg",
+      "title": null,
+      "alt": "99c3a650 F13f 4d46 Ba13 4e355f35a255"
     },
     {
       "src": "/media/2022/07/front-cover-1.jpg",
@@ -75,16 +80,6 @@
       "src": "/media/2022/07/269bb870-6f00-44fc-b1eb-cc29e4e74737-1.jpg",
       "title": "269bb870-6f00-44fc-b1eb-cc29e4e74737-1",
       "alt": "269bb870-6f00-44fc-b1eb-cc29e4e74737-1"
-    },
-    {
-      "src": "/media/2022/07/cd61d5e1-3fb7-48f5-aad7-4349a71be99f-copy.jpg",
-      "title": "cd61d5e1-3fb7-48f5-aad7-4349a71be99f-copy",
-      "alt": "cd61d5e1-3fb7-48f5-aad7-4349a71be99f-copy"
-    },
-    {
-      "src": "/media/2022/07/99c3a650-f13f-4d46-ba13-4e355f35a255.jpg",
-      "title": null,
-      "alt": "99c3a650 F13f 4d46 Ba13 4e355f35a255"
     }
   ]
 }

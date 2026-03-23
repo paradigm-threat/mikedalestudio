@@ -82,37 +82,69 @@ export function GalleryCarousel({ items, label }: Props) {
       tabIndex={0}
     >
       <div className="border-border bg-card relative overflow-hidden rounded-2xl border p-2 shadow-sm">
-        <div ref={emblaRef} className="overflow-hidden rounded-xl">
-          <div className="flex touch-pan-y">
-            {items.map((item, i) => (
-              <div
-                key={item.src}
-                className="min-w-0 flex-[0_0_100%] px-1 sm:flex-[0_0_85%] lg:flex-[0_0_70%]"
-              >
-                <PortfolioImage
-                  src={item.src}
-                  alt={item.alt}
-                  priority={i === 0}
-                  sizes="(max-width: 1024px) 100vw, 70vw"
-                />
-                {item.title ? (
-                  <p className="text-muted-foreground mt-2 text-center text-sm">
-                    {item.title}
-                  </p>
-                ) : null}
-              </div>
-            ))}
+        <div className="relative">
+          <button
+            type="button"
+            className="bg-card/90 text-foreground border-border hover:bg-muted focus:ring-ring absolute top-1/2 left-1 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border shadow-md backdrop-blur-sm focus:ring-2 focus:outline-none sm:h-14 sm:w-14"
+            onClick={scrollPrev}
+            aria-label="Previous slide"
+          >
+            <span className="text-2xl leading-none" aria-hidden>
+              ‹
+            </span>
+          </button>
+          <button
+            type="button"
+            className="bg-card/90 text-foreground border-border hover:bg-muted focus:ring-ring absolute top-1/2 right-1 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border shadow-md backdrop-blur-sm focus:ring-2 focus:outline-none sm:h-14 sm:w-14"
+            onClick={scrollNext}
+            aria-label="Next slide"
+          >
+            <span className="text-2xl leading-none" aria-hidden>
+              ›
+            </span>
+          </button>
+          <div ref={emblaRef} className="overflow-hidden rounded-xl">
+            <div className="flex touch-pan-y">
+              {items.map((item, i) => (
+                <div
+                  key={item.src}
+                  className="min-w-0 flex-[0_0_100%] px-1 sm:flex-[0_0_85%] lg:flex-[0_0_70%]"
+                >
+                  <PortfolioImage
+                    src={item.src}
+                    alt={item.alt}
+                    priority={i === 0}
+                    sizes="(max-width: 1024px) 100vw, 70vw"
+                  />
+                  {item.title ? (
+                    <p className="text-muted-foreground mt-2 text-center text-sm">
+                      {item.title}
+                    </p>
+                  ) : null}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="mt-4 flex items-center justify-center gap-3">
-          <button type="button" className={btnClass} onClick={scrollPrev} aria-label="Previous slide">
-            ←
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+          <button
+            type="button"
+            className={btnClass}
+            onClick={scrollPrev}
+            aria-label="Previous slide"
+          >
+            Previous
           </button>
           <span className="text-muted-foreground text-sm tabular-nums" aria-live="polite">
             {selected + 1} / {items.length}
           </span>
-          <button type="button" className={btnClass} onClick={scrollNext} aria-label="Next slide">
-            →
+          <button
+            type="button"
+            className={btnClass}
+            onClick={scrollNext}
+            aria-label="Next slide"
+          >
+            Next
           </button>
         </div>
         <div className="mt-3 flex flex-wrap justify-center gap-1.5">

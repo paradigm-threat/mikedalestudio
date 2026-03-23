@@ -3,6 +3,7 @@ import { DM_Sans, Syne } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd } from "@/components/json-ld";
+import { NavPrefetch } from "@/components/nav-prefetch";
 import { Providers } from "@/components/providers";
 import { SkipLink } from "@/components/skip-link";
 import { site, siteUrl } from "@/content/site";
@@ -71,6 +72,7 @@ export default function RootLayout({
     >
       <body className="bg-background text-foreground flex min-h-full flex-col font-sans antialiased">
         <Providers>
+          <NavPrefetch />
           <SkipLink />
           <Header />
           <main id="main" className="flex-1">

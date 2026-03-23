@@ -103,6 +103,7 @@ export function HomePage() {
             <li key={c.href}>
               <Link
                 href={c.href}
+                prefetch
                 className="border-border bg-card hover:border-accent block h-full rounded-2xl border p-5 shadow-sm transition-colors focus:ring-2 focus:ring-ring focus:outline-none"
               >
                 <span className="font-display text-lg font-semibold">{c.title}</span>

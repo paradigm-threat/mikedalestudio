@@ -35,7 +35,7 @@ export function Footer() {
           >
             Etsy
           </a>
-          <Link href="/contact" className="text-accent hover:underline">
+          <Link href="/contact" prefetch className="text-accent hover:underline">
             Contact
           </Link>
         </div>

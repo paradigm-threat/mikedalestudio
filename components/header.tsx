@@ -6,15 +6,7 @@ import { useState } from "react";
 import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
 import { ThemeToggle } from "@/components/theme-toggle";
-
-const nav = [
-  { href: "/", label: "Home" },
-  { href: "/graphic-design", label: "Graphic Design" },
-  { href: "/printmaking", label: "Printmaking" },
-  { href: "/illustration", label: "Illustration" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+import { NAV_ROUTES } from "@/lib/routes";
 
 export function Header() {
   const pathname = usePathname();
@@ -25,6 +17,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link
           href="/"
+          prefetch
           className="font-display text-foreground hover:text-accent shrink-0 text-lg font-semibold tracking-tight sm:text-xl"
           onClick={() => setOpen(false)}
         >
@@ -39,12 +32,13 @@ export function Header() {
           )}
           aria-label="Primary"
         >
-          {nav.map(({ href, label }) => {
+          {NAV_ROUTES.map(({ href, label }) => {
             const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
             return (
               <Link
                 key={href}
                 href={href}
+                prefetch
                 className={cn(
                   "focus:ring-ring rounded-lg px-3 py-2 text-sm font-medium focus:ring-2 focus:outline-none sm:py-1.5",
                   active
